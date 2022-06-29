@@ -1,0 +1,54 @@
+.btn {
+  --button-default-height: 42px;
+  --button-horizontal-padding: calc(
+    var(--button-default-height) - var(--button-raise-level)
+  );
+
+  &.left {
+    > span > span {
+      padding-right: calc(var(--button-horizontal-padding));
+      padding-left: calc(var(--button-horizontal-padding) * 3 / 2);
+    }
+    .content {
+      > span:nth-child(2) {
+        left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &.right {
+    > span > span {
+      padding-left: calc(var(--button-horizontal-padding));
+      padding-right: calc(var(--button-horizontal-padding) * 3 / 2);
+    }
+    .content {
+      > span:nth-child(2) {
+        right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.content {
+  display: block;
+  font-size: 13px;
+  line-height: 25;
+
+  > span:nth-child(1) {
+    display: block;
+    font-size: inherit;
+  }
+
+  > span:nth-child(2) {
+    padding-right: calc(var(--button-horizontal-padding));
+    padding-left: calc(var(--button-horizontal-padding));
+    height: var(--button-horizontal-padding);
+    display: flex;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,37 @@
+:global(#sim-urna) .container {
+  display: block;
+  background-color: var(--background-dark);
+}
+
+:global(#sim-urna) .item {
+  display: flex;
+  align-items: center;
+
+  li,
+  span,
+  strong,
+  p,
+  label {
+    color: var(--text-primary);
+  }
+
+  label {
+    min-width: 300px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 8px;
+    background-color: var(--background);
+    padding: 2px 4px;
+    border-radius: 4px;
+
+    span {
+      margin-right: 4px;
+    }
+  }
+}

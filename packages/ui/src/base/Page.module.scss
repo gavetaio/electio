@@ -1,0 +1,9 @@
+.container {
+  display: block;
+  margin-left: var(--menu-width);
+  min-height: 100vh;
+  margin-top: var(--bar-height);
+  padding: 32px;
+  position: relative;
+  z-index: 1;
+}

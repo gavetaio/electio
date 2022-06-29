@@ -1,0 +1,72 @@
+.container {
+  --logo-size: 74px;
+  --logo-border-radius: calc(var(--logo-size) / 32);
+  --logo-handler-bg: #fff;
+
+  --logo-bg: #fff;
+  --logo-bg-secondary: #fff;
+  --logo-spacer: calc(1px * 2);
+
+  display: flex;
+  height: var(--logo-size);
+  width: var(--logo-size);
+  position: relative;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    flex: 1;
+  }
+
+  &.circled {
+    background-color: var(--logo-bg);
+    border-radius: 50%;
+
+    > div {
+      margin: calc(var(--logo-size) / 4);
+    }
+
+    span {
+      background-color: var(--logo-bg-secondary);
+    }
+  }
+
+  span {
+    display: block;
+    position: relative;
+    height: calc((100% - var(--logo-spacer)) / 3);
+    background-color: var(--logo-bg);
+    border-radius: var(--logo-border-radius);
+    clip-path: polygon(
+      0% 0%,
+      0% 100%,
+      40% 100%,
+      40% 40%,
+      60% 40%,
+      60% 60%,
+      40% 60%,
+      40% 100%,
+      100% 100%,
+      100% 0%
+    );
+  }
+
+  &.noclip {
+    span {
+      clip-path: none;
+    }
+
+    span:before {
+      content: "";
+      position: absolute;
+      width: 25%;
+      height: 20%;
+      top: 40%;
+      left: calc(50% - 12.5%);
+      border-radius: var(--logo-border-radius);
+      background-color: var(--logo-handler-bg);
+    }
+  }
+}

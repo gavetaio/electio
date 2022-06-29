@@ -1,0 +1,30 @@
+.container {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+
+  li {
+    display: block;
+    background-color: var(--background);
+    padding: 0 8px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+
+  .danger {
+    background-color: var(--background-rouge);
+  }
+
+  .warning {
+    background-color: var(--background-jaune);
+  }
+}
+
+.number {
+  font-weight: 800;
+  margin-right: 4px;
+}

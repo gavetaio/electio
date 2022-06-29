@@ -1,0 +1,15 @@
+.container {
+  display: block;
+  padding-bottom: var(--unit-v-4);
+
+  .header {
+    padding-bottom: var(--unit-v-2);
+
+    h4,
+    h5,
+    h3 {
+      color: var(--text-alt);
+      text-transform: uppercase;
+    }
+  }
+}

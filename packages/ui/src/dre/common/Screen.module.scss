@@ -1,0 +1,18 @@
+:global(#sim-urna) .screen {
+  background-color: var(--screen);
+  transition: background-color 50ms ease-in-out;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  position: relative;
+  margin: calc(var(--unit) * 6);
+  border: 1px solid var(--border);
+  padding: calc(var(--unit) / 4);
+  flex-shrink: 0;
+  display: flex;
+
+  h2,
+  p,
+  strong {
+    transition: color 50ms ease-in-out;
+  }
+}

@@ -1,0 +1,16 @@
+:global(#sim-urna) .keyboard {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  padding-top: calc(var(--unit) * 4);
+
+  > div:nth-child(1) {
+    width: calc(var(--key-width) * 5);
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+  }
+}

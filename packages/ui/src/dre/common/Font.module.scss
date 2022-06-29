@@ -1,0 +1,65 @@
+:global(#sim-urna) .font {
+  --font-size: 1;
+  --line-height: 1.35;
+  --font-weight: 500;
+
+  font-family: var(--dre-font-family);
+  font-size: calc(var(--font-body) * var(--font-size));
+  line-height: calc(var(--font-body) * var(--font-size) * var(--line-height));
+  font-weight: var(--font-weight);
+  min-height: calc(var(--font-body) * var(--font-size) * var(--line-height));
+  position: relative;
+  margin-bottom: 0 !important;
+  padding: 0;
+
+  &.caps {
+    text-transform: uppercase;
+  }
+
+  &.bold {
+    font-weight: 600;
+  }
+
+  &.thin {
+    font-weight: 300;
+  }
+
+  b,
+  i,
+  span,
+  mark,
+  em {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  mark {
+    background-color: var(--black);
+    color: var(--white);
+    display: inline-flex;
+    padding: var(--unit);
+    align-items: center;
+    justify-content: center;
+    min-height: calc(var(--unit) * 7);
+    min-height: calc(var(--unit) * 7);
+    font-weight: 500;
+    border-radius: calc(var(--unit) / 2);
+
+    span {
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  mark[data-type="confirm"] {
+    background-color: var(--button-action);
+    color: var(--black);
+    min-height: calc(var(--unit) * 5);
+  }
+
+  mark[data-type="danger"] {
+    background-color: var(--button-danger);
+    color: var(--black);
+    min-height: calc(var(--unit) * 5);
+  }
+}

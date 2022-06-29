@@ -1,0 +1,11 @@
+:global(#sim-urna) .key {
+  min-width: var(--key-width);
+  height: var(--key-height);
+  color: var(--white);
+  margin: calc(var(--key-height) / 4);
+  position: relative;
+
+  p {
+    margin: 0 0 0 calc(var(--key-height) / 10);
+  }
+}

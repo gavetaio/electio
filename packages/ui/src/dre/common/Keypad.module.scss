@@ -1,0 +1,35 @@
+:global(#sim-urna) .keypad {
+  --dre-font-family: var(--keypad-font-family);
+  background-color: var(--keypad);
+  position: relative;
+  margin: calc(var(--unit) * 6);
+  border: calc(var(--unit) / 2) solid var(--border);
+  width: var(--keypad-width);
+  height: 100%;
+
+  > header {
+    height: calc(var(--unit) * 20);
+    background-color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-weight: 600;
+    }
+  }
+
+  > div {
+    flex: 1;
+  }
+}
+
+.carbon {
+  background: radial-gradient(black 6%, transparent 12%) 0 0,
+    radial-gradient(black 6%, transparent 12%) 6px 6px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 6%, transparent 10%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 6%, transparent 10%) 6px 7px;
+  background-color: #282828;
+  background-size: 12px 12px;
+}

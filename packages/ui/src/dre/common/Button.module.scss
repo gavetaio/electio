@@ -1,0 +1,54 @@
+:global(#sim-urna) .button {
+  --button-width: 29;
+  --button-height: 12;
+  --button-background: #ffffff;
+  --button-background-dark: #ffffff;
+
+  position: relative;
+  width: calc(var(--unit) * var(--button-width));
+  height: calc(var(--unit) * var(--button-height));
+  margin: 0 calc(var(--key-height) / 4);
+
+  > div {
+    --elevation-bg-dark: var(--button-background-dark) !important;
+    --elevation-bg-case: var(--button-background) !important;
+  }
+
+  p {
+    color: var(--black);
+    text-align: center;
+    width: 100%;
+    align-self: flex-start;
+    margin-top: calc(var(--unit) / 2);
+  }
+
+  &.white {
+    --button-background: var(--button-white);
+    --button-background-dark: var(--button-white-dark);
+
+    p {
+      transform: scaleX(1) scaleY(1.1);
+    }
+  }
+
+  &.danger {
+    --button-background: var(--button-danger);
+    --button-background-dark: var(--button-danger-dark);
+    display: block;
+
+    p {
+      transform: scaleX(0.92) scaleY(1.1);
+    }
+  }
+
+  &.action {
+    --button-background: var(--button-action);
+    --button-background-dark: var(--button-action-dark);
+    --button-height: 16;
+
+    p {
+      transform: scaleX(0.86) scaleY(1.1);
+      transform-origin: 50% 10%;
+    }
+  }
+}

@@ -1,0 +1,183 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-dark);
+  border: 1px solid var(--background-darker);
+  margin: 24px 0;
+
+  > footer {
+    display: flex;
+    justify-content: flex-start;
+    padding: 4px 24px !important;
+    background-color: var(--background-darker);
+  }
+
+  button {
+    margin-right: 8px;
+  }
+}
+
+.graph {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.title {
+  span {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  button {
+    margin-left: 12px;
+  }
+}
+
+.graph {
+  line {
+    transition: opacity 125ms ease-out;
+  }
+
+  &.graphHover {
+    .grid {
+      > g > line {
+        opacity: 0.1;
+      }
+    }
+  }
+  .textHover {
+    fill: #fff;
+    transition: fill 125ms ease-out;
+  }
+}
+
+.labels {
+  text {
+    font-weight: bold;
+  }
+
+  > g > :nth-last-child(1) {
+    fill: var(--text-primary);
+  }
+}
+
+.lineLabel {
+  display: block;
+  cursor: pointer;
+  transition: opacity 125ms ease-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.grid {
+  > g {
+    > line {
+      transition: opacity 125ms ease-out;
+      opacity: 0.35;
+    }
+  }
+}
+
+.helper {
+  transition: opacity 125ms ease-out;
+  opacity: 0;
+}
+
+.helperAnglular {
+  opacity: 0;
+}
+
+.helperVisible {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.circleGroup {
+  text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 125ms ease-out;
+  }
+  circle {
+    cursor: pointer;
+    transition: all 100ms ease-out;
+  }
+}
+
+.line {
+  text {
+    transition: fill 125ms ease-out;
+  }
+  > :nth-child(n) {
+    transition: opacity 125ms ease-out;
+  }
+
+  &.inactive {
+    position: relative;
+    z-index: -1;
+
+    > :nth-child(1) {
+      animation: hideInfo 125ms ease-out forwards;
+    }
+    > :nth-child(2) {
+      animation: hideInfo 125ms ease-out forwards;
+    }
+    > :nth-child(3) {
+      opacity: 0.35;
+    }
+  }
+}
+
+.lineHover {
+  text {
+    transition: fill 125ms ease-out;
+    fill: #fff;
+  }
+}
+
+.circleHover {
+  text {
+    animation: showInfo 1s forwards;
+  }
+  circle {
+    transform: scale(1.6);
+    stroke: white;
+    fill: white;
+  }
+}
+
+.animateIn {
+  animation: showInfo 1s linear forwards;
+}
+
+@keyframes showInfo {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes hideInfo {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,250 @@
+.revisited {
+  --dre-font-family: "Atkinson Hyperlegible";
+  --keypad-font-family: "Roboto Condensed";
+  --font-body: calc(var(--unit) * 4);
+  --font-medium: 1;
+  --font-header: 1.1;
+  --font-key: 2.4;
+  --font-label: 1.1;
+  --font-title: 2.5;
+  --font-input: 4.5;
+  --font-line: 1.54;
+  --font-candidate: 1.9;
+  --font-footer: 1.05;
+  --font-button: 1.35;
+  --font-logo: 1.5;
+  --font-thumb-large: 1;
+  --font-thumb-medium: 0.84;
+  --font-caption: 0.8;
+  --font-alert: 3;
+  --font-end: 12;
+  --font-progress: 1.2;
+  --font-bar: 0.8;
+
+  --font-h0: 3;
+  --font-h1: 2;
+  --font-h2: 1.8;
+  --font-h3: 1.5;
+  --font-h4: 1;
+
+  --font-small: 0.9;
+  --font-tiny: 0.82;
+  --font-micro: 0.68;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.keypad {
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(var(--unit) * 0);
+  width: calc(var(--unit) * 111);
+}
+
+.keypad__title {
+  height: calc(var(--unit) * 25);
+}
+
+.review {
+  p,
+  h2 {
+    color: var(--black);
+  }
+
+  > section {
+    --vote-gap: calc(var(--unit) * 4);
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    padding: 0px calc(var(--vote-gap) * 2);
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+
+    > div {
+      margin-right: var(--vote-gap);
+      margin-bottom: calc(var(--vote-gap) / 2);
+      width: calc((100% / 2) - var(--vote-gap) / 2);
+    }
+
+    > div:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    > div:nth-last-child(1),
+    > div:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  strong {
+    color: var(--black);
+  }
+}
+
+.footer {
+  text-align: center;
+  height: calc(var(--unit) * 16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  > :nth-last-child(1) {
+    margin-top: calc(var(--unit) * 1.5);
+  }
+}
+
+.confirm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(var(--unit) * 4);
+
+  > p {
+    margin: 0 calc(var(--unit) * 2) !important;
+  }
+}
+
+.boolean {
+  display: flex;
+  flex-direction: row;
+
+  > p {
+    margin: 0 calc(var(--unit) * 2) !important;
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content,
+.thumbnails {
+  label,
+  p,
+  small h1,
+  h2,
+  h3 {
+    font-family: var(--dre-font-family);
+    color: var(--black);
+  }
+}
+
+.content__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.header {
+  height: calc(var(--unit) * 24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  position: relative;
+  justify-content: center;
+
+  > h2 {
+    margin: 0 0 calc(var(--unit) * 2) 0 !important;
+  }
+}
+
+.end {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: var(--black);
+  }
+
+  .progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+      margin-top: 12px;
+      color: var(--black);
+    }
+  }
+
+  .bar {
+    height: calc(var(--unit) * 7);
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--black);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.bar_25:before {
+      transform: translateX(-75%);
+    }
+
+    &.bar_75:before {
+      transform: translateX(-25%);
+    }
+
+    &.bar_100:before {
+      transform: translateX(0%);
+    }
+
+    p {
+      background-color: var(--screen);
+      margin: 0;
+      color: var(--black);
+      padding: calc(var(--unit) / 2);
+    }
+
+    &:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--grey-dark);
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.blink {
+  --screen: var(--button-danger);
+}
+
+.blink-danger {
+  --screen: var(--button-danger);
+}
+
+.blink-confirm {
+  --screen: var(--button-action);
+}
+
+.blink-pad {
+  --screen: var(--keypad);
+}

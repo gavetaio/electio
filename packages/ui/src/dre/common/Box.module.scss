@@ -1,0 +1,59 @@
+.container {
+  --unit: 3px;
+  --unit-m: calc(var(--unit) * 4);
+  --black: #111111;
+  --keypad: #444444;
+  --grey: #cfcfcf;
+  --grey-dark: #aaaaaa;
+  --border: #aaaaaa;
+  --white: #ffffff;
+  --ice: #f4f4f4;
+  --screen: #efefef;
+  --color-key: #333;
+  --dark-grey: #3a3a3a;
+  --lighthen-10: rgba(255, 255, 255, 0.5);
+  --screen-ratio: 0.6;
+  --screen-base: 180;
+  --screen-width: calc(var(--unit) * var(--screen-base));
+  --screen-height: calc(var(--screen-width) * var(--screen-ratio));
+  --keypad-width: calc(var(--screen-width) * 0.6);
+  --key-ratio: calc(228 / 180);
+  --key-width: calc(var(--unit) * 18);
+  --key-height: calc(var(--key-width) / var(--key-ratio));
+  --button-white: #fafbff;
+  --button-white-dark: #b9b9b9;
+  --button-danger: #f59a62;
+  --button-danger-dark: #b46534;
+  --button-action: #51d9a1;
+  --button-action-dark: #268d62;
+
+  padding: calc(var(--unit) * 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media all and (max-width: 1360px) {
+    --unit: 2.5px;
+  }
+
+  @media all and (max-width: 1190px) {
+    --unit: 2px;
+  }
+
+  @media all and (max-width: 1020px) {
+    --unit: 1.8px;
+  }
+
+  > div {
+    background-color: var(--grey);
+    display: block;
+    border-radius: calc(var(--unit) / 2);
+  }
+}
+
+.box {
+  padding: calc(var(--unit) * 10) calc(var(--unit) * 16);
+  display: flex;
+  align-items: center;
+  position: relative;
+}

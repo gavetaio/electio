@@ -1,0 +1,21 @@
+.container {
+  padding: var(--unit-h-3) var(--unit-v-3);
+  text-align: center;
+  font-weight: 600;
+
+  h5 {
+    color: var(--text-lighter);
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--unit-v-3);
+  }
+
+  svg {
+    fill: var(--text-lighter);
+    margin-bottom: var(--unit-v-1);
+  }
+}
