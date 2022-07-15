@@ -1,4 +1,13 @@
 import { getCargoDisplayTitle } from "../common/helpers";
+import { forEachList } from "@gavetaio/core";
+
+const LABEL_EXTRA = {
+  suplente_1: "1º Suplente",
+  suplente_2: "2º Suplente",
+  vice_governador: "Vice-governador",
+  vice_presidente: "Vice-presidente",
+  vice_prefeito: "Vice-prefeito",
+};
 
 const getAlertState = ({
   isCompleto,
@@ -249,13 +258,13 @@ export const getTransformedResponse = ({ state, current, numbers }) => {
     };
   }
 
-  if (state?.candidato?.extra) {
-    state.candidato.extra.forEach(() => {
+  if (state?.candidato?.extras) {
+    forEachList(state.candidato.extras, (id, info) => {
       response.thumbnails.secondary.push({
         size: "medium",
         shown: true,
-        title: current?.label,
-        src: state?.candidato?.image,
+        title: LABEL_EXTRA[id],
+        src: state?.candidato?.image || "default",
       });
     });
   }
@@ -288,6 +297,18 @@ export const getTransformedResponse = ({ state, current, numbers }) => {
     state,
   });
 
+  const extra = [];
+
+  if (state?.candidato?.extras) {
+    forEachList(state.candidato.extras, (id, info) => {
+      extra.push({ cargo: LABEL_EXTRA[id], nome: info });
+    });
+  } else if (current?.extras) {
+    forEachList(current.extras, (id) => {
+      extra.push(id); //
+    });
+  }
+
   response.formObject = buildForm({
     numbers,
     placeholder: current?.digitos || 0,
@@ -297,7 +318,7 @@ export const getTransformedResponse = ({ state, current, numbers }) => {
     warning,
     legenda: current.legenda && state.partido?.nome && !state.candidato?.nome,
     blank: state?.blank,
-    extra: state.candidato?.extra || current.extra,
+    extra,
   });
 
   return response;

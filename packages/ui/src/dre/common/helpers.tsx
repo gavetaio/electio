@@ -22,7 +22,7 @@ export const genderFlip = (nome) => {
 
 export const getCargoDisplayTitle = ({ current, state }) => {
   const title = current?.label;
-  if (state?.candidato?.genero && state?.candidato?.genero === 2) {
+  if (state?.candidato?.genero && state?.candidato?.genero !== 2) {
     return genderFlip(title);
   }
 

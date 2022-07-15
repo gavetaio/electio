@@ -39,6 +39,29 @@ Este projeto é uma **plataforma de pesquisa**, não um aplicativo. Pela flexibi
 
 Para que possamos finalizar nosso último estudo, que analisa o impacto da utilização da urna eletrônica nos **votos válidos** de eleições brasileiras, é crucial o acesso aos dados que estão **indisponíveis no repositório eleitoral** do órgão oficial (<a href="https://dadosabertos.tse.jus.br">dadosabertos.tse.jus.br</a>); somente após esta disponibilização, poderá ser encerrada a análise desta efetividade. Atualmente, os dados de `1994` estão parcialmente disponíveis `49%`, e, apenas `2%` dos dados das eleições de `1996` estão disponibilizados → veja a tabela com o [resumo dos dados capturados](docs/dados.md).
 
+## Da releitura da interface da Urna Eletrônica brasileira
+
+Para fazer a correção da interface da urna eletrônica, seguimos as indicações dispostas pela <a href="">Venice Commission</a>, <a href="https://aceproject.org/ace-en/topics/vc/onePage">ACE/IDEA</a>, <a href="https://eeas.europa.eu/archives/eueom/pdf/handbook-eueom-en-2nd-edition_en.pdf">European Commission</a>, <a href="https://www.osce.org/files/f/documents/f/8/104573.pdf">ODIHR/OSCE</a>, e pelo <a href="http://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm">Código Eleitoral</a> brasileiro em seu `A146.XIII` no que tange o cuidado com a correção de erros inadvertidos e possibilidade de confirmação do voto por parte do eleitor.
+
+<img style="width:50%" src="/assets/legado.png" />
+<img style="width:50%" src="/assets/prototipo.png" />
+
+Tanto a versão corrigida, como a versão legada da urna eletrônica, podem ser exportados para arquivos `.html` e rodados em qualquer dispositivo — com ou sem o auxílio de mini-teclado numérico físico —, para que assim, sejam devidamente estudados e tenham seus resultados analisados pela comunidade científica.
+
+Para maiores informações sobre a reconstrução da urna e a comprovação de suas falhas de usabilidade, acesse o documento <a href="https://gaveta.io/g2v4">G2V4 — Da ruptura da intenção de voto do eleitor brasileiro</a>.
+
+## Das formas de participação da comunidade científica
+
+No momento, não temos a intenção de evoluir as investigações aqui propostas, consideramos que as mesmas já atingiram o objetivo embarcado na criação do `@gavetaio/liber`. A partir de agora, o projeto está aberto, e, sua atualização, sob a responsabilidade de membros da comunidade.
+
+- Para colaborar, envie sua `PR` para a branch <a href="https://github.com/gavetaio/electio">civitas</a>.
+- Caso deseje tornar-se um membro da comunidade, com permissões de aprovação, faça o pedido juntamente com o envio de sua `PR`; no processo de aprovação de novos membros avaliamos apenas o nível de atividade de seu perfil aqui no <a href="">github</a>, evitando a participação de contas inativas.
+- Caso você represente uma instituição, pedimos que, se possível, faça suas colaborações através de **perfis oficiais**.
+
+## Da escolha da linguagem e framework de programação
+
+Optamos por cosntruir este projeto em `javascript`, com <a href="https://nodejs.dev/">nodejs</a> e <a href="https://reactjs.org/">reactjs</a>, por sua flexibilidade e agilidade, mas, principalmente, por ser esta a maior comunidade de desenvolvedores existente no Brasil. Desta forma, visamos facilitar o engajamento na **validação dos dados** aqui expostos e também na **evolução das investigações** propostas.
+
 ## Da instalação deste projeto
 
 Utilize os comandos abaixo para clonar, instalar e rodar o projeto. Você pode utilizar tanto `yarn` quanto `npm`.
@@ -49,26 +72,6 @@ cd electio
 yarn install && yarn post
 yarn start
 ```
-
-## Das formas de participação da comunidade científica
-
-No momento, não temos a intenção de evoluir as investigações aqui propostas, consideramos que as mesmas já atingiram o objetivo embarcado na criação do `@gavetaio/liber`. A partir de agora, o projeto está aberto, e, sua atualização, sob a responsabilidade de membros da comunidade.
-
-- Para colaborar, envie sua `PR` para a branch <a href="https://github.com/gavetaio/electio">civitas</a>.
-- Caso deseje tornar-se um membro da comunidade, com permissões de aprovação, faça o pedido juntamente com o envio de sua `PR`; no processo de aprovação de novos membros avaliamos apenas o nível de atividade de seu perfil aqui no <a href="">github</a>, evitando a participação de contas inativas.
-- Caso você represente uma instituição, pedimos que, se possível, faça suas colaborações através de **perfis oficiais**.
-
-## Da releitura da interface da Urna Eletrônica brasileira
-
-Para fazer a correção da interface da urna eletrônica, seguimos as indicações dispostas pela <a href="">Venice Commission</a>, <a href="https://aceproject.org/ace-en/topics/vc/onePage">ACE/IDEA</a>, <a href="https://eeas.europa.eu/archives/eueom/pdf/handbook-eueom-en-2nd-edition_en.pdf">European Commission</a>, <a href="https://www.osce.org/files/f/documents/f/8/104573.pdf">ODIHR/OSCE</a>, e pelo <a href="http://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm">Código Eleitoral</a> brasileiro em seu `A146.XIII` no que tange o cuidado com a correção de erros inadvertidos e possibilidade de confirmação do voto por parte do eleitor.
-
-Tanto a versão corrigida, como a versão legada da urna eletrônica, podem ser exportados para arquivos `.html` e rodados em qualquer dispositivo - com ou sem o auxílio de mini-teclado numérico físico -, para que assim, sejam devidamente estudados e tenham seus resultados analisados pela comunidade científica.
-
-Para maiores informações sobre a reconstrução da urna e a comprovação de suas falhas de usabilidade, acesse o documento <a href="https://gaveta.io/g2v4">G2V4 — Da ruptura da intenção de voto do eleitor brasileiro</a>.
-
-## Da escolha da linguagem e framework de programação
-
-Optamos por cosntruir este projeto em `javascript`, com <a href="https://nodejs.dev/">nodejs</a> e <a href="https://reactjs.org/">reactjs</a>, por sua flexibilidade e agilidade, mas, principalmente, por ser esta a maior comunidade de desenvolvedores existente no Brasil. Desta forma, visamos facilitar o engajamento na **validação dos dados** aqui expostos e também na **evolução das investigações** propostas.
 
 ## Dos links relacionados
 

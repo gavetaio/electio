@@ -109,13 +109,15 @@ const Simulador = ({ config, extra = {} }: any) => {
   };
 
   const checkCandidato = (numero) => {
-    const { data } = getRefs();
+    const { current, data } = getRefs();
     if (!data?.candidatos) {
       logAction("check-candidato", { event: "not-configured" });
       return;
     }
 
-    const candidato = data.candidatos.find((cand) => cand.numero === numero);
+    const candidato = data.candidatos.find((cand) => {
+      return cand.numero === numero && current.cargo === cand.cargo;
+    });
 
     if (!candidato) {
       logAction("check-candidato", { event: "wrong-number" });
