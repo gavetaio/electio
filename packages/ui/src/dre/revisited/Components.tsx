@@ -209,7 +209,7 @@ export const VoteBoxSmall = (props: any) => {
           </div>
           <div className={styles.voto__candidate}>
             <Font type="body" name="small" bold>
-              {nome.toUpperCase()}
+              {nome ? nome.toUpperCase() : "—"}
             </Font>
           </div>
           <div className={styles.voto__extra}>
