@@ -20,8 +20,6 @@ Começamos com um script rodado via <b>`command line`</b>, que fazia uma rápida
 
 Para maiores informações técnicas a respeito do processo eleitoral brasileiro, sua estrutura em comparação aos princípios democráticos ocidentais e o impacto das recorrentes falhas apresentadas, acesse a <a href="https://gaveta.io/G2T1"><b>trilha de conhecimento #G2T1</b></a> diretamente no <b>`@gavetaio/liber`</b>.
 
-<img src="/assets/g2t1.gif"  style="width: 720px;" />
-
 ## Da validação das falhas encontradas
 
 Os dados gerados através desta ferramenta estão exportados, aqui mesmo no repositório, dentro da pasta <b>`/docs`</b>, visando a conferência e validação de toda sociedade. Em caso de inconsistências, **qualquer cidadão pode enviar um pedido de atualização** através da criação de uma <b>`PR`</b>, direcionando-a para a branch <b>`civitas`</b>. As tabelas exportadas estão organizadas da seguinte forma:
@@ -48,8 +46,6 @@ Este projeto é uma **plataforma de pesquisa**, não um aplicativo. Pela flexibi
 ## Da releitura da interface da Urna Eletrônica brasileira
 
 Para fazer a correção da interface da urna eletrônica, seguimos as indicações dispostas pela <a href="https://www.venice.coe.int/webforms/documents/default.aspx?pdffile=CDL-AD(2002)023rev2-cor-e"><b>Venice Commission</b></a>, <a href="https://aceproject.org/ace-en/topics/vc/onePage"><b>ACE/IDEA</b></a>, <a href="https://eeas.europa.eu/archives/eueom/pdf/handbook-eueom-en-2nd-edition_en.pdf"><b>European Commission</b></a>, <a href="https://www.osce.org/files/f/documents/f/8/104573.pdf"><b>ODIHR/OSCE</b></a>, e pelo <a href="http://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm">Código Eleitoral</a> brasileiro em seu <b>`A146.XIII`</b> no que tange o cuidado com a correção de erros inadvertidos e possibilidade de confirmação do voto por parte do eleitor.
-
-<img src="/assets/sim.gif"  style="width: 720px;" />
 
 Tanto a versão corrigida, como a versão legada da urna eletrônica, podem ser exportados para arquivos <b>`.html`</b> e rodados em qualquer dispositivo — com ou sem o auxílio de mini-teclado numérico físico —, para que assim, sejam devidamente estudados e tenham seus resultados analisados pela comunidade científica.
 
