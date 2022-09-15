@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "start": "lerna run --parallel start",
+    "codex:integrity-test": "lerna run --parallel --scope @gavetaio/codex test",
     "build": "lerna run --parallel --scope @gavetaio/election-app build",
     "post": "lerna run --parallel --scope @gavetaio/election-app neverpostinstall"
   },
